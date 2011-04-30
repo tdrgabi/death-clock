@@ -11,7 +11,7 @@
      the remaining seconds"/>
    </oaf_server>
 
-   <oaf_server iid="OAFIID:GNOME_PysampleApplet"
+   <oaf_server iid="OAFIID:GNOME_DeathClock"
                type="factory" location="OAFIID:GNOME_PysampleApplet_Factory">
 
      <oaf_attribute name="repo_ids" type="stringv">

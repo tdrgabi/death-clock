@@ -42,6 +42,6 @@ def sample_factory(applet, iid):
     return gtk.TRUE
 
 if __name__ == '__main__':
-    gnomeapplet.bonobo_factory("OAFIID:GNOME_PysampleApplet_Factory", 
+    gnomeapplet.bonobo_factory("OAFIID:GNOME_DeathClock", 
                                gnomeapplet.Applet.__gtype__, 
                                "hello", "0", sample_factory)
