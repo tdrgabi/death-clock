@@ -1,0 +1,8 @@
+It's supposed to count the seconds until you reach a certain age (80) and die.
+
+To install just copy the server file to  /usr/lib/bonobo/servers/ and the py
+file to /usr/bin/. Make sure you have the rights to execute the deathclock.py
+
+Once installed you will find the application among gnome-panel's applets
+
+The end date is currently hardcoded but the code is dead easy to modify.

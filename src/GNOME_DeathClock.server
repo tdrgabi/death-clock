@@ -1,0 +1,28 @@
+ <oaf_info>
+   <oaf_server iid="OAFIID:GNOME_DeathClock"
+               type="exe" location="/usr/bin/deathclock.py">
+
+     <oaf_attribute name="repo_ids" type="stringv">
+       <item value="IDL:Bonobo/GenericFactory:1.0"/>
+       <item value="IDL:Bonobo/Unknown:1.0"/>
+     </oaf_attribute>
+     <oaf_attribute name="name" type="string" value="Death Clock"/>
+     <oaf_attribute name="description" type="string" value="Counts
+     the remaining seconds"/>
+   </oaf_server>
+
+   <oaf_server iid="OAFIID:GNOME_PysampleApplet"
+               type="factory" location="OAFIID:GNOME_PysampleApplet_Factory">
+
+     <oaf_attribute name="repo_ids" type="stringv">
+       <item value="IDL:GNOME/Vertigo/PanelAppletShell:1.0"/>
+       <item value="IDL:Bonobo/Control:1.0"/>
+       <item value="IDL:Bonobo/Unknown:1.0"/>
+     </oaf_attribute>
+     <oaf_attribute name="name" type="string" value="Death Clock"/>
+     <oaf_attribute name="description" type="string" value="Time is
+     ticking away, you have only so many seconds left! Create!"/>
+     <oaf_attribute name="panel:category" type="string" value="Productivity"/>
+     <oaf_attribute name="panel:icon" type="string" value="bug-buddy.png"/>
+   </oaf_server>
+ </oaf_info>
