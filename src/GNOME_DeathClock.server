@@ -12,7 +12,7 @@
    </oaf_server>
 
    <oaf_server iid="OAFIID:GNOME_DeathClock"
-               type="factory" location="OAFIID:GNOME_PysampleApplet_Factory">
+               type="factory" location="OAFIID:GNOME_DeathClock">
 
      <oaf_attribute name="repo_ids" type="stringv">
        <item value="IDL:GNOME/Vertigo/PanelAppletShell:1.0"/>
