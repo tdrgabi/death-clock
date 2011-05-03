@@ -7,8 +7,9 @@ import gnomeapplet
 import datetime
 import locale
 import gobject
-#import logging
+import sys
 
+#import logging
 #logging.basicConfig(filename="/home/tudor/logg",format='%(levelname)s:%(message)s', level=logging.DEBUG)
 
 class DeathClock(gnomeapplet.Applet):
@@ -20,7 +21,6 @@ class DeathClock(gnomeapplet.Applet):
         self.applet.add(self.label)
         self.applet.show_all()
         gobject.timeout_add(self.timeout_interval, self.refresh_seconds)
-        return gtk.TRUE
 
     def get_remaining_seconds(self):
         date1 = datetime.datetime.today()
@@ -41,7 +41,20 @@ def sample_factory(applet, iid):
     DeathClock(applet,iid)
     return gtk.TRUE
 
-if __name__ == '__main__':
-    gnomeapplet.bonobo_factory("OAFIID:GNOME_DeathClock", 
-                               gnomeapplet.Applet.__gtype__, 
-                               "hello", "0", sample_factory)
+
+if len(sys.argv) == 2 and sys.argv[1] == "run-in-window":
+    print "Running in debug mode"
+    main_window = gtk.Window(gtk.WINDOW_TOPLEVEL)
+    main_window.set_title("Python Applet")
+    main_window.connect("destroy", gtk.mainquit)
+    app = gnomeapplet.Applet()
+    sample_factory(app, None)
+    app.reparent(main_window)
+    main_window.show_all()
+    gtk.main()
+    sys.exit()
+else:
+    if __name__ == '__main__':
+        gnomeapplet.bonobo_factory("OAFIID:GNOME_DeathClock_Factory",
+                                   gnomeapplet.Applet.__gtype__,
+                                   "hello", "0", sample_factory)

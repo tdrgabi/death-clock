@@ -1,6 +1,5 @@
  <oaf_info>
-   <oaf_server iid="OAFIID:GNOME_DeathClock"
-               type="exe" location="/usr/bin/deathclock.py">
+   <oaf_server ubuntu-gettext-domain="gnome-applets-2.0" iid="OAFIID:GNOME_DeathClock_Factory" type="exe" location="/usr/bin/deathclock.py">
 
      <oaf_attribute name="repo_ids" type="stringv">
        <item value="IDL:Bonobo/GenericFactory:1.0"/>
@@ -11,8 +10,8 @@
      the remaining seconds"/>
    </oaf_server>
 
-   <oaf_server iid="OAFIID:GNOME_DeathClock"
-               type="factory" location="OAFIID:GNOME_DeathClock">
+   <oaf_server ubuntu-gettext-domain="gnome-applets-2.0" iid="OAFIID:GNOME_DeathClock"
+               type="factory" location="OAFIID:GNOME_DeathClock_Factory">
 
      <oaf_attribute name="repo_ids" type="stringv">
        <item value="IDL:GNOME/Vertigo/PanelAppletShell:1.0"/>
